@@ -1,0 +1,49 @@
+@import '../../assets/colors.scss';
+
+.nav {
+    z-index: 2;
+    position: relative;
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        a {
+            padding: 0 10px;
+            position: relative;
+            border-radius: 10px 10px 0 0;
+            height: 30px;
+            border: 1px solid white;
+            border-bottom: 1px solid transparent;
+            line-height: 30px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s;
+            color: rgba(0, 0, 0, 0.2);
+
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                width: 100%;
+                right: 0;
+                height: 2px;
+                background-color: transparent;
+            }
+
+            &:hover {
+                color: $borderColor;
+            }
+        }
+
+        a.active {
+            color: rgba(0, 0, 0, 1);
+            border: 1px solid $borderColor;
+
+            &:before {
+                background-color: white;
+            }
+        }
+    }
+}

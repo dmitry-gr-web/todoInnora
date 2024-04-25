@@ -1,0 +1,47 @@
+@import '../../assets/colors.scss';
+.block-empty {
+    padding-top: 10px;
+    position: sticky;
+    top: 0;
+    height: 40px;
+    background-color: white;
+    z-index: 2;
+}
+.block-input {
+    padding-top: 10px;
+    position: sticky;
+    top: 0;
+    height: 40px;
+    background-color: white;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+
+    input {
+        width: 100%;
+        outline: none;
+        border: 1px solid $borderColor;
+        border-radius: 5px;
+        height: 100%;
+        padding: 0 5px;
+
+        &::placeholder {
+            color: black;
+        }
+    }
+
+    button {
+        height: 26px;
+        width: 26px;
+        cursor: pointer;
+
+        svg {
+            transition: 0.3s;
+        }
+
+        &:hover svg {
+            fill: black;
+            stroke: black;
+        }
+    }
+}
